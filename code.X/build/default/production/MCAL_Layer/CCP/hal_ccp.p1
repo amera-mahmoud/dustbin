@@ -1,0 +1,573 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F1592 `(v ~T0 @X0 0 tf ]
+[v F1593 `(v ~T0 @X0 0 tf ]
+[v F1569 `(v ~T0 @X0 0 tf ]
+"24 MCAL_Layer/CCP/hal_ccp.h
+[; ;MCAL_Layer/CCP/hal_ccp.h: 24: {
+[s S103 `*F1569 1 :4 `uc 1 ]
+[n S103 . CCP1_InterruptHandler mode ]
+"912 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[s S39 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S39 . CCP1M CCP1Y CCP1X ]
+"917
+[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . CCP1M0 CCP1M1 CCP1M2 CCP1M3 ]
+"911
+[u S38 `S39 1 `S40 1 ]
+[n S38 . . . ]
+"924
+[v _CCP1CONbits `VS38 ~T0 @X0 0 e@23 ]
+"1624
+[s S68 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S68 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE PSPIE ]
+"1623
+[u S67 `S68 1 ]
+[n S67 . . ]
+"1635
+[v _PIE1bits `VS67 ~T0 @X0 0 e@140 ]
+"43 MCAL_Layer/CCP/../Interrupt/mcal_internal_interrupt.h
+[; ;MCAL_Layer/CCP/../Interrupt/mcal_internal_interrupt.h: 43: void all_interrupt_disable();
+[v _all_interrupt_disable `(v ~T0 @X0 0 e? ]
+"538 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[s S25 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S25 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF PSPIF ]
+"537
+[u S24 `S25 1 ]
+[n S24 . . ]
+"549
+[v _PIR1bits `VS24 ~T0 @X0 0 e@12 ]
+"42 MCAL_Layer/CCP/../Interrupt/mcal_internal_interrupt.h
+[; ;MCAL_Layer/CCP/../Interrupt/mcal_internal_interrupt.h: 42: void all_interrupt_enable();
+[v _all_interrupt_enable `(v ~T0 @X0 0 e? ]
+"1443 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1442
+[u S61 `S62 1 ]
+[n S61 . . ]
+"1454
+[v _TRISCbits `VS61 ~T0 @X0 0 e@135 ]
+"885
+[v _CCPR1 `Vus ~T0 @X0 0 e@21 ]
+[v F1607 `(v ~T0 @X0 0 tf ]
+[v F1609 `(v ~T0 @X0 0 tf ]
+[v F1610 `(v ~T0 @X0 0 tf ]
+[v F1574 `(v ~T0 @X0 0 tf ]
+"32 MCAL_Layer/CCP/hal_ccp.h
+[; ;MCAL_Layer/CCP/hal_ccp.h: 32: {
+[s S104 `*F1574 1 :4 `uc 1 ]
+[n S104 . CCP2_InterruptHandler mode ]
+"1100 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[s S47 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S47 . CCP2M CCP2Y CCP2X ]
+"1105
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S48 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 ]
+"1099
+[u S46 `S47 1 `S48 1 ]
+[n S46 . . . ]
+"1112
+[v _CCP2CONbits `VS46 ~T0 @X0 0 e@29 ]
+"1686
+[s S70 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S70 . CCP2IE . BCLIE EEIE . CMIE ]
+"1685
+[u S69 `S70 1 ]
+[n S69 . . ]
+"1695
+[v _PIE2bits `VS69 ~T0 @X0 0 e@141 ]
+"600
+[s S27 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S27 . CCP2IF . BCLIF EEIF . CMIF ]
+"599
+[u S26 `S27 1 ]
+[n S26 . . ]
+"609
+[v _PIR2bits `VS26 ~T0 @X0 0 e@13 ]
+"1073
+[v _CCPR2 `Vus ~T0 @X0 0 e@27 ]
+[v F1624 `(v ~T0 @X0 0 tf ]
+"54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"218
+[; <" PORTB equ 06h ;# ">
+"280
+[; <" PORTC equ 07h ;# ">
+"342
+[; <" PORTD equ 08h ;# ">
+"404
+[; <" PORTE equ 09h ;# ">
+"436
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; <" T1CON equ 010h ;# ">
+"732
+[; <" TMR2 equ 011h ;# ">
+"739
+[; <" T2CON equ 012h ;# ">
+"810
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; <" SSPCON equ 014h ;# ">
+"887
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; <" TXREG equ 019h ;# ">
+"1068
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; <" TRISA equ 085h ;# ">
+"1377
+[; <" TRISB equ 086h ;# ">
+"1439
+[; <" TRISC equ 087h ;# ">
+"1501
+[; <" TRISD equ 088h ;# ">
+"1563
+[; <" TRISE equ 089h ;# ">
+"1620
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; <" PR2 equ 092h ;# ">
+"1825
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; <" EECON2 equ 018Dh ;# ">
+"3 MCAL_Layer/CCP/hal_ccp.c
+[; ;MCAL_Layer/CCP/hal_ccp.c: 3: void (*ccp1_InterruptHandler)(void) = ((void*)0);
+[v _ccp1_InterruptHandler `*F1592 ~T0 @X0 1 e ]
+[i _ccp1_InterruptHandler
+-> -> -> 0 `i `*v `*F1593
+]
+"5
+[; ;MCAL_Layer/CCP/hal_ccp.c: 5: std_ReturnType ccp1_init(const ccp1_config_t* ccp1_obj)
+[v _ccp1_init `(uc ~T0 @X0 1 ef1`*CS103 ]
+"6
+[; ;MCAL_Layer/CCP/hal_ccp.c: 6: {
+{
+[e :U _ccp1_init ]
+"5
+[; ;MCAL_Layer/CCP/hal_ccp.c: 5: std_ReturnType ccp1_init(const ccp1_config_t* ccp1_obj)
+[v _ccp1_obj `*CS103 ~T0 @X0 1 r1 ]
+"6
+[; ;MCAL_Layer/CCP/hal_ccp.c: 6: {
+[f ]
+"7
+[; ;MCAL_Layer/CCP/hal_ccp.c: 7:     std_ReturnType ret = (std_ReturnType)0X00;;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"8
+[; ;MCAL_Layer/CCP/hal_ccp.c: 8:     if(((void*)0) == ccp1_obj)
+[e $ ! == -> -> -> 0 `i `*v `*CS103 _ccp1_obj 106  ]
+"9
+[; ;MCAL_Layer/CCP/hal_ccp.c: 9:     {
+{
+"10
+[; ;MCAL_Layer/CCP/hal_ccp.c: 10:         ret = (std_ReturnType)0X00;;
+[e = _ret -> -> 0 `i `uc ]
+"11
+[; ;MCAL_Layer/CCP/hal_ccp.c: 11:     }
+}
+[e $U 107  ]
+"12
+[; ;MCAL_Layer/CCP/hal_ccp.c: 12:     else
+[e :U 106 ]
+"13
+[; ;MCAL_Layer/CCP/hal_ccp.c: 13:     {
+{
+"14
+[; ;MCAL_Layer/CCP/hal_ccp.c: 14:         ret = (std_ReturnType)0X01;;
+[e = _ret -> -> 1 `i `uc ]
+"15
+[; ;MCAL_Layer/CCP/hal_ccp.c: 15:         (CCP1CONbits.CCP1M = 0);
+[e = . . _CCP1CONbits 0 0 -> -> 0 `i `uc ]
+"17
+[; ;MCAL_Layer/CCP/hal_ccp.c: 17:         (PIE1bits.CCP1IE = 0);
+[e = . . _PIE1bits 0 2 -> -> 0 `i `uc ]
+"18
+[; ;MCAL_Layer/CCP/hal_ccp.c: 18:          all_interrupt_disable();
+[e ( _all_interrupt_disable ..  ]
+"19
+[; ;MCAL_Layer/CCP/hal_ccp.c: 19:          (PIR1bits.CCP1IF = 0);
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+"20
+[; ;MCAL_Layer/CCP/hal_ccp.c: 20:          ccp1_InterruptHandler = ccp1_obj->CCP1_InterruptHandler;
+[e = _ccp1_InterruptHandler . *U _ccp1_obj 0 ]
+"21
+[; ;MCAL_Layer/CCP/hal_ccp.c: 21:          (PIE1bits.CCP1IE = 1);
+[e = . . _PIE1bits 0 2 -> -> 1 `i `uc ]
+"22
+[; ;MCAL_Layer/CCP/hal_ccp.c: 22:          all_interrupt_enable();
+[e ( _all_interrupt_enable ..  ]
+"24
+[; ;MCAL_Layer/CCP/hal_ccp.c: 24:        (CCP1CONbits.CCP1M = ccp1_obj->mode);
+[e = . . _CCP1CONbits 0 0 . *U _ccp1_obj 1 ]
+"25
+[; ;MCAL_Layer/CCP/hal_ccp.c: 25:        if((4 == ccp1_obj->mode)
+[e $ ! || == -> 4 `i -> . *U _ccp1_obj 1 `i == -> 5 `i -> . *U _ccp1_obj 1 `i 108  ]
+"27
+[; ;MCAL_Layer/CCP/hal_ccp.c: 27:        {
+{
+"28
+[; ;MCAL_Layer/CCP/hal_ccp.c: 28:            TRISCbits.TRISC2 = 1;
+[e = . . _TRISCbits 0 2 -> -> 1 `i `uc ]
+"29
+[; ;MCAL_Layer/CCP/hal_ccp.c: 29:        }
+}
+[e :U 108 ]
+"30
+[; ;MCAL_Layer/CCP/hal_ccp.c: 30:     }
+}
+[e :U 107 ]
+"31
+[; ;MCAL_Layer/CCP/hal_ccp.c: 31:     return ret;
+[e ) _ret ]
+[e $UE 105  ]
+"32
+[; ;MCAL_Layer/CCP/hal_ccp.c: 32: }
+[e :UE 105 ]
+}
+"34
+[; ;MCAL_Layer/CCP/hal_ccp.c: 34: void ccp1_change_mode(uint8 mode)
+[v _ccp1_change_mode `(v ~T0 @X0 1 ef1`uc ]
+"35
+[; ;MCAL_Layer/CCP/hal_ccp.c: 35: {
+{
+[e :U _ccp1_change_mode ]
+"34
+[; ;MCAL_Layer/CCP/hal_ccp.c: 34: void ccp1_change_mode(uint8 mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"35
+[; ;MCAL_Layer/CCP/hal_ccp.c: 35: {
+[f ]
+"36
+[; ;MCAL_Layer/CCP/hal_ccp.c: 36:     (CCP1CONbits.CCP1M = 0);
+[e = . . _CCP1CONbits 0 0 -> -> 0 `i `uc ]
+"37
+[; ;MCAL_Layer/CCP/hal_ccp.c: 37:     (CCP1CONbits.CCP1M = mode);
+[e = . . _CCP1CONbits 0 0 _mode ]
+"38
+[; ;MCAL_Layer/CCP/hal_ccp.c: 38:     (PIR1bits.CCP1IF = 0);
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+"39
+[; ;MCAL_Layer/CCP/hal_ccp.c: 39: }
+[e :UE 109 ]
+}
+"41
+[; ;MCAL_Layer/CCP/hal_ccp.c: 41: void ccp1_register_write(uint16 value)
+[v _ccp1_register_write `(v ~T0 @X0 1 ef1`us ]
+"42
+[; ;MCAL_Layer/CCP/hal_ccp.c: 42: {
+{
+[e :U _ccp1_register_write ]
+"41
+[; ;MCAL_Layer/CCP/hal_ccp.c: 41: void ccp1_register_write(uint16 value)
+[v _value `us ~T0 @X0 1 r1 ]
+"42
+[; ;MCAL_Layer/CCP/hal_ccp.c: 42: {
+[f ]
+"43
+[; ;MCAL_Layer/CCP/hal_ccp.c: 43:     CCPR1 = value;
+[e = _CCPR1 _value ]
+"44
+[; ;MCAL_Layer/CCP/hal_ccp.c: 44: }
+[e :UE 110 ]
+}
+"46
+[; ;MCAL_Layer/CCP/hal_ccp.c: 46: uint16 ccp1_register_read()
+[v _ccp1_register_read `(us ~T0 @X0 1 ef ]
+"47
+[; ;MCAL_Layer/CCP/hal_ccp.c: 47: {
+{
+[e :U _ccp1_register_read ]
+[f ]
+"48
+[; ;MCAL_Layer/CCP/hal_ccp.c: 48:     uint16 value = CCPR1;
+[v _value `us ~T0 @X0 1 a ]
+[e = _value _CCPR1 ]
+"49
+[; ;MCAL_Layer/CCP/hal_ccp.c: 49:     return value;
+[e ) _value ]
+[e $UE 111  ]
+"50
+[; ;MCAL_Layer/CCP/hal_ccp.c: 50: }
+[e :UE 111 ]
+}
+"53
+[; ;MCAL_Layer/CCP/hal_ccp.c: 53: void CCP1_ISR(void)
+[v _CCP1_ISR `(v ~T0 @X0 1 ef ]
+"54
+[; ;MCAL_Layer/CCP/hal_ccp.c: 54: {
+{
+[e :U _CCP1_ISR ]
+[f ]
+"55
+[; ;MCAL_Layer/CCP/hal_ccp.c: 55:     (PIR1bits.CCP1IF = 0);
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+"56
+[; ;MCAL_Layer/CCP/hal_ccp.c: 56:     if(ccp1_InterruptHandler)
+[e $ ! != _ccp1_InterruptHandler -> -> 0 `i `*F1607 113  ]
+"57
+[; ;MCAL_Layer/CCP/hal_ccp.c: 57:         ccp1_InterruptHandler();
+[e ( *U _ccp1_InterruptHandler ..  ]
+[e :U 113 ]
+"58
+[; ;MCAL_Layer/CCP/hal_ccp.c: 58: }
+[e :UE 112 ]
+}
+"62
+[; ;MCAL_Layer/CCP/hal_ccp.c: 62: void (*ccp2_InterruptHandler)(void) = ((void*)0);
+[v _ccp2_InterruptHandler `*F1609 ~T0 @X0 1 e ]
+[i _ccp2_InterruptHandler
+-> -> -> 0 `i `*v `*F1610
+]
+"64
+[; ;MCAL_Layer/CCP/hal_ccp.c: 64: std_ReturnType ccp2_init(const ccp2_config_t* ccp2_obj)
+[v _ccp2_init `(uc ~T0 @X0 1 ef1`*CS104 ]
+"65
+[; ;MCAL_Layer/CCP/hal_ccp.c: 65: {
+{
+[e :U _ccp2_init ]
+"64
+[; ;MCAL_Layer/CCP/hal_ccp.c: 64: std_ReturnType ccp2_init(const ccp2_config_t* ccp2_obj)
+[v _ccp2_obj `*CS104 ~T0 @X0 1 r1 ]
+"65
+[; ;MCAL_Layer/CCP/hal_ccp.c: 65: {
+[f ]
+"66
+[; ;MCAL_Layer/CCP/hal_ccp.c: 66:     std_ReturnType ret = (std_ReturnType)0X00;;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 0 `i `uc ]
+"67
+[; ;MCAL_Layer/CCP/hal_ccp.c: 67:     if(((void*)0) == ccp2_obj)
+[e $ ! == -> -> -> 0 `i `*v `*CS104 _ccp2_obj 115  ]
+"68
+[; ;MCAL_Layer/CCP/hal_ccp.c: 68:     {
+{
+"69
+[; ;MCAL_Layer/CCP/hal_ccp.c: 69:         ret = (std_ReturnType)0X00;;
+[e = _ret -> -> 0 `i `uc ]
+"70
+[; ;MCAL_Layer/CCP/hal_ccp.c: 70:     }
+}
+[e $U 116  ]
+"71
+[; ;MCAL_Layer/CCP/hal_ccp.c: 71:     else
+[e :U 115 ]
+"72
+[; ;MCAL_Layer/CCP/hal_ccp.c: 72:     {
+{
+"73
+[; ;MCAL_Layer/CCP/hal_ccp.c: 73:         ret = (std_ReturnType)0X01;;
+[e = _ret -> -> 1 `i `uc ]
+"74
+[; ;MCAL_Layer/CCP/hal_ccp.c: 74:         (CCP2CONbits.CCP2M = 0);
+[e = . . _CCP2CONbits 0 0 -> -> 0 `i `uc ]
+"76
+[; ;MCAL_Layer/CCP/hal_ccp.c: 76:         (PIE2bits.CCP2IE = 0);
+[e = . . _PIE2bits 0 0 -> -> 0 `i `uc ]
+"77
+[; ;MCAL_Layer/CCP/hal_ccp.c: 77:          all_interrupt_disable();
+[e ( _all_interrupt_disable ..  ]
+"78
+[; ;MCAL_Layer/CCP/hal_ccp.c: 78:          (PIR2bits.CCP2IF = 0);
+[e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
+"79
+[; ;MCAL_Layer/CCP/hal_ccp.c: 79:          ccp2_InterruptHandler = ccp2_obj->CCP2_InterruptHandler;
+[e = _ccp2_InterruptHandler . *U _ccp2_obj 0 ]
+"80
+[; ;MCAL_Layer/CCP/hal_ccp.c: 80:          (PIE2bits.CCP2IE = 1);
+[e = . . _PIE2bits 0 0 -> -> 1 `i `uc ]
+"81
+[; ;MCAL_Layer/CCP/hal_ccp.c: 81:          all_interrupt_enable();
+[e ( _all_interrupt_enable ..  ]
+"83
+[; ;MCAL_Layer/CCP/hal_ccp.c: 83:        (CCP2CONbits.CCP2M = ccp2_obj->mode);
+[e = . . _CCP2CONbits 0 0 . *U _ccp2_obj 1 ]
+"84
+[; ;MCAL_Layer/CCP/hal_ccp.c: 84:        if((4 == ccp2_obj->mode)
+[e $ ! || == -> 4 `i -> . *U _ccp2_obj 1 `i == -> 5 `i -> . *U _ccp2_obj 1 `i 117  ]
+"86
+[; ;MCAL_Layer/CCP/hal_ccp.c: 86:        {
+{
+"87
+[; ;MCAL_Layer/CCP/hal_ccp.c: 87:            TRISCbits.TRISC1 = 1;
+[e = . . _TRISCbits 0 1 -> -> 1 `i `uc ]
+"88
+[; ;MCAL_Layer/CCP/hal_ccp.c: 88:        }
+}
+[e :U 117 ]
+"89
+[; ;MCAL_Layer/CCP/hal_ccp.c: 89:     }
+}
+[e :U 116 ]
+"90
+[; ;MCAL_Layer/CCP/hal_ccp.c: 90:     return ret;
+[e ) _ret ]
+[e $UE 114  ]
+"91
+[; ;MCAL_Layer/CCP/hal_ccp.c: 91: }
+[e :UE 114 ]
+}
+"93
+[; ;MCAL_Layer/CCP/hal_ccp.c: 93: void ccp2_change_mode(uint8 mode)
+[v _ccp2_change_mode `(v ~T0 @X0 1 ef1`uc ]
+"94
+[; ;MCAL_Layer/CCP/hal_ccp.c: 94: {
+{
+[e :U _ccp2_change_mode ]
+"93
+[; ;MCAL_Layer/CCP/hal_ccp.c: 93: void ccp2_change_mode(uint8 mode)
+[v _mode `uc ~T0 @X0 1 r1 ]
+"94
+[; ;MCAL_Layer/CCP/hal_ccp.c: 94: {
+[f ]
+"95
+[; ;MCAL_Layer/CCP/hal_ccp.c: 95:     (CCP2CONbits.CCP2M = 0);
+[e = . . _CCP2CONbits 0 0 -> -> 0 `i `uc ]
+"96
+[; ;MCAL_Layer/CCP/hal_ccp.c: 96:     (CCP2CONbits.CCP2M = mode);
+[e = . . _CCP2CONbits 0 0 _mode ]
+"97
+[; ;MCAL_Layer/CCP/hal_ccp.c: 97:     (PIR2bits.CCP2IF = 0);
+[e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
+"98
+[; ;MCAL_Layer/CCP/hal_ccp.c: 98: }
+[e :UE 118 ]
+}
+"100
+[; ;MCAL_Layer/CCP/hal_ccp.c: 100: void ccp2_register_write(uint16 value)
+[v _ccp2_register_write `(v ~T0 @X0 1 ef1`us ]
+"101
+[; ;MCAL_Layer/CCP/hal_ccp.c: 101: {
+{
+[e :U _ccp2_register_write ]
+"100
+[; ;MCAL_Layer/CCP/hal_ccp.c: 100: void ccp2_register_write(uint16 value)
+[v _value `us ~T0 @X0 1 r1 ]
+"101
+[; ;MCAL_Layer/CCP/hal_ccp.c: 101: {
+[f ]
+"102
+[; ;MCAL_Layer/CCP/hal_ccp.c: 102:     CCPR2 = value;
+[e = _CCPR2 _value ]
+"103
+[; ;MCAL_Layer/CCP/hal_ccp.c: 103: }
+[e :UE 119 ]
+}
+"105
+[; ;MCAL_Layer/CCP/hal_ccp.c: 105: uint16 ccp2_register_read()
+[v _ccp2_register_read `(us ~T0 @X0 1 ef ]
+"106
+[; ;MCAL_Layer/CCP/hal_ccp.c: 106: {
+{
+[e :U _ccp2_register_read ]
+[f ]
+"107
+[; ;MCAL_Layer/CCP/hal_ccp.c: 107:     uint16 value = CCPR2;
+[v _value `us ~T0 @X0 1 a ]
+[e = _value _CCPR2 ]
+"108
+[; ;MCAL_Layer/CCP/hal_ccp.c: 108:     return value;
+[e ) _value ]
+[e $UE 120  ]
+"109
+[; ;MCAL_Layer/CCP/hal_ccp.c: 109: }
+[e :UE 120 ]
+}
+"112
+[; ;MCAL_Layer/CCP/hal_ccp.c: 112: void CCP2_ISR(void)
+[v _CCP2_ISR `(v ~T0 @X0 1 ef ]
+"113
+[; ;MCAL_Layer/CCP/hal_ccp.c: 113: {
+{
+[e :U _CCP2_ISR ]
+[f ]
+"114
+[; ;MCAL_Layer/CCP/hal_ccp.c: 114:     (PIR2bits.CCP2IF = 0);
+[e = . . _PIR2bits 0 0 -> -> 0 `i `uc ]
+"115
+[; ;MCAL_Layer/CCP/hal_ccp.c: 115:     if(ccp2_InterruptHandler)
+[e $ ! != _ccp2_InterruptHandler -> -> 0 `i `*F1624 122  ]
+"116
+[; ;MCAL_Layer/CCP/hal_ccp.c: 116:         ccp2_InterruptHandler();
+[e ( *U _ccp2_InterruptHandler ..  ]
+[e :U 122 ]
+"117
+[; ;MCAL_Layer/CCP/hal_ccp.c: 117: }
+[e :UE 121 ]
+}

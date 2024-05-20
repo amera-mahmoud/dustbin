@@ -1,0 +1,16 @@
+/* 
+ * File:   hal_gpio_cfg.h
+ * Author: FiX-DEll
+ *
+ * Created on March 8, 2024, 11:22 PM
+ */
+
+#ifndef HAL_GPIO_CFG_H
+#define	HAL_GPIO_CFG_H
+
+#define GPIO_CONFIGURATION_ENABLE 1
+#define GPIO_PIN_PORT_CONFIGURATION GPIO_CONFIGURATION_ENABLE
+#define GPIO_PORT_CONFIGURATION     GPIO_CONFIGURATION_ENABLE
+
+#endif	/* HAL_GPIO_CFG_H */
+

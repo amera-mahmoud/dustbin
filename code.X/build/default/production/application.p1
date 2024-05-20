@@ -1,0 +1,640 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+[v F1571 `(v ~T0 @X0 0 tf ]
+"25 ./MCAL_Layer/Timer/hal_Timer1.h
+[; ;./MCAL_Layer/Timer/hal_Timer1.h: 25: {
+[s S103 `*F1571 1 `us 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 ]
+[n S103 . TIMER1_InterruptHandler initial_value timer_mode timer1_oscilator extclk_sync prescaler_select ]
+"62
+[; ;./MCAL_Layer/Timer/hal_Timer1.h: 62: std_ReturnType timer1_inti(timer1_config_t* tmr1_obj);
+[v _timer1_inti `(uc ~T0 @X0 0 ef1`*S103 ]
+"16 ./application.h
+[; ;./application.h: 16: extern timer1_config_t tmr1;
+[v _tmr1 `S103 ~T0 @X0 0 e ]
+"16 ./MCAL_Layer/CCP/../GPIO/hal_gpio.h
+[s S102 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S102 . port pin logic direction ]
+"17 application.c
+[; ;application.c: 17:     sensor_initialize(&trigger, CCP1);
+[c E1588 0 1 .. ]
+[n E1588 . CCP1 CCP2  ]
+"32 ./application.h
+[; ;./application.h: 32: void sensor_initialize(pin_config_t* trigger_pin, ccp_select_t ccp_select);
+[v _sensor_initialize `(v ~T0 @X0 0 ef2`*S102`E1588 ]
+"20
+[; ;./application.h: 20: extern pin_config_t trigger;
+[v _trigger `S102 ~T0 @X0 0 e ]
+"34
+[; ;./application.h: 34: void servo_initialize(pin_config_t* servo_pin, ccp_select_t ccp_select);
+[v _servo_initialize `(v ~T0 @X0 0 ef2`*S102`E1588 ]
+"19
+[; ;./application.h: 19: extern pin_config_t servo;
+[v _servo `S102 ~T0 @X0 0 e ]
+"36
+[; ;./application.h: 36: void servo0(void);
+[v _servo0 `(v ~T0 @X0 0 ef ]
+"38
+[; ;./application.h: 38: void servo90(void);
+[v _servo90 `(v ~T0 @X0 0 ef ]
+"76 ./MCAL_Layer/CCP/../GPIO/hal_gpio.h
+[v _gpio_pin_initialize `(uc ~T0 @X0 0 ef1`*CS102 ]
+[v F1594 `(v ~T0 @X0 0 tf ]
+"24 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 24: {
+[s S104 `*F1594 1 :4 `uc 1 ]
+[n S104 . CCP1_InterruptHandler mode ]
+"55
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 55: std_ReturnType ccp1_init(const ccp1_config_t* ccp1_obj);
+[v _ccp1_init `(uc ~T0 @X0 0 ef1`*CS104 ]
+"17 ./application.h
+[; ;./application.h: 17: extern ccp1_config_t ccp1;
+[v _ccp1 `S104 ~T0 @X0 0 e ]
+[v F1599 `(v ~T0 @X0 0 tf ]
+"32 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 32: {
+[s S105 `*F1599 1 :4 `uc 1 ]
+[n S105 . CCP2_InterruptHandler mode ]
+"60
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 60: std_ReturnType ccp2_init(const ccp2_config_t* ccp2_obj);
+[v _ccp2_init `(uc ~T0 @X0 0 ef1`*CS105 ]
+"18 ./application.h
+[; ;./application.h: 18: extern ccp2_config_t ccp2;
+[v _ccp2 `S105 ~T0 @X0 0 e ]
+"62 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 62: void ccp2_register_write(uint16 value);
+[v _ccp2_register_write `(v ~T0 @X0 0 ef1`us ]
+"114 application.c
+[; ;application.c: 114:     gpio_pin_write_logic(&servo, GPIO_HIGH);
+[c E1524 0 1 .. ]
+[n E1524 . GPIO_LOW GPIO_HIGH  ]
+"73 ./MCAL_Layer/CCP/../GPIO/hal_gpio.h
+[v _gpio_pin_write_logic `(uc ~T0 @X0 0 ef2`*CS102`E1524 ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"885 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[v _CCPR1 `Vus ~T0 @X0 0 e@21 ]
+"56 ./MCAL_Layer/CCP/hal_ccp.h
+[; ;./MCAL_Layer/CCP/hal_ccp.h: 56: void ccp1_change_mode(uint8 mode);
+[v _ccp1_change_mode `(v ~T0 @X0 0 ef1`uc ]
+"54 C:/Program Files/Microchip/MPLABX/v6.10/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877A.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"218
+[; <" PORTB equ 06h ;# ">
+"280
+[; <" PORTC equ 07h ;# ">
+"342
+[; <" PORTD equ 08h ;# ">
+"404
+[; <" PORTE equ 09h ;# ">
+"436
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; <" T1CON equ 010h ;# ">
+"732
+[; <" TMR2 equ 011h ;# ">
+"739
+[; <" T2CON equ 012h ;# ">
+"810
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; <" SSPCON equ 014h ;# ">
+"887
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; <" TXREG equ 019h ;# ">
+"1068
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; <" TRISA equ 085h ;# ">
+"1377
+[; <" TRISB equ 086h ;# ">
+"1439
+[; <" TRISC equ 087h ;# ">
+"1501
+[; <" TRISD equ 088h ;# ">
+"1563
+[; <" TRISE equ 089h ;# ">
+"1620
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; <" PR2 equ 092h ;# ">
+"1825
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; <" EECON2 equ 018Dh ;# ">
+"11 application.c
+[; ;application.c: 11: uint8 counter = 9, rising_edge = 1, open_bin = 0, read_once = 1, object_exist = 0;
+[v _counter `uc ~T0 @X0 1 e ]
+[i _counter
+-> -> 9 `i `uc
+]
+[v _rising_edge `uc ~T0 @X0 1 e ]
+[i _rising_edge
+-> -> 1 `i `uc
+]
+[v _open_bin `uc ~T0 @X0 1 e ]
+[i _open_bin
+-> -> 0 `i `uc
+]
+[v _read_once `uc ~T0 @X0 1 e ]
+[i _read_once
+-> -> 1 `i `uc
+]
+[v _object_exist `uc ~T0 @X0 1 e ]
+[i _object_exist
+-> -> 0 `i `uc
+]
+"12
+[; ;application.c: 12: uint16 start = 0, end = 0, overflow = 0;
+[v _start `us ~T0 @X0 1 e ]
+[i _start
+-> -> 0 `i `us
+]
+[v _end `us ~T0 @X0 1 e ]
+[i _end
+-> -> 0 `i `us
+]
+[v _overflow `us ~T0 @X0 1 e ]
+[i _overflow
+-> -> 0 `i `us
+]
+"13
+[; ;application.c: 13: float time = 0, distance = 0, clk_time = 0.000004;
+[v _time `f ~T0 @X0 1 e ]
+[i _time
+-> -> 0 `i `f
+]
+[v _distance `f ~T0 @X0 1 e ]
+[i _distance
+-> -> 0 `i `f
+]
+[v _clk_time `f ~T0 @X0 1 e ]
+[i _clk_time
+-> .0.000004 `f
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"15
+[; ;application.c: 15: int main() {
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"16
+[; ;application.c: 16:     timer1_inti(&tmr1);
+[e ( _timer1_inti (1 &U _tmr1 ]
+"17
+[; ;application.c: 17:     sensor_initialize(&trigger, CCP1);
+[e ( _sensor_initialize (2 , &U _trigger . `E1588 0 ]
+"18
+[; ;application.c: 18:     servo_initialize(&servo, CCP2);
+[e ( _servo_initialize (2 , &U _servo . `E1588 1 ]
+"20
+[; ;application.c: 20:     servo0();
+[e ( _servo0 ..  ]
+"21
+[; ;application.c: 21:     while(1)
+[e :U 108 ]
+"22
+[; ;application.c: 22:     {
+{
+"24
+[; ;application.c: 24:         if(object_exist)
+[e $ ! != -> _object_exist `i -> 0 `i 110  ]
+"25
+[; ;application.c: 25:         {
+{
+"32
+[; ;application.c: 32:             if (distance >= 3 && distance <= 15 && read_once)
+[e $ ! && && >= _distance -> -> 3 `i `f <= _distance -> -> 15 `i `f != -> _read_once `i -> 0 `i 111  ]
+"33
+[; ;application.c: 33:             {
+{
+"34
+[; ;application.c: 34:                 open_bin = !open_bin;
+[e = _open_bin -> -> ! != -> _open_bin `i -> 0 `i `i `uc ]
+"35
+[; ;application.c: 35:                 read_once = 0;
+[e = _read_once -> -> 0 `i `uc ]
+"36
+[; ;application.c: 36:             }
+}
+[e $U 112  ]
+"38
+[; ;application.c: 38:             else if (distance > 15)
+[e :U 111 ]
+[e $ ! > _distance -> -> 15 `i `f 113  ]
+"39
+[; ;application.c: 39:             {
+{
+"40
+[; ;application.c: 40:                 read_once = 1;
+[e = _read_once -> -> 1 `i `uc ]
+"41
+[; ;application.c: 41:             }
+}
+[e :U 113 ]
+[e :U 112 ]
+"42
+[; ;application.c: 42:             object_exist = 0;
+[e = _object_exist -> -> 0 `i `uc ]
+"43
+[; ;application.c: 43:         }
+}
+[e :U 110 ]
+"47
+[; ;application.c: 47:        if(open_bin)
+[e $ ! != -> _open_bin `i -> 0 `i 114  ]
+"48
+[; ;application.c: 48:         {
+{
+"49
+[; ;application.c: 49:             servo90();
+[e ( _servo90 ..  ]
+"50
+[; ;application.c: 50:         }
+}
+[e $U 115  ]
+"53
+[; ;application.c: 53:         else
+[e :U 114 ]
+"54
+[; ;application.c: 54:         {
+{
+"55
+[; ;application.c: 55:             servo0();
+[e ( _servo0 ..  ]
+"56
+[; ;application.c: 56:         }
+}
+[e :U 115 ]
+"57
+[; ;application.c: 57:     }
+}
+[e :U 107 ]
+[e $U 108  ]
+[e :U 109 ]
+"59
+[; ;application.c: 59:     return (0);
+[e ) -> 0 `i ]
+[e $UE 106  ]
+"60
+[; ;application.c: 60: }
+[e :UE 106 ]
+}
+"65
+[; ;application.c: 65: void sensor_initialize(pin_config_t* trigger_pin, ccp_select_t ccp_select)
+[v _sensor_initialize `(v ~T0 @X0 1 ef2`*S102`E1588 ]
+"66
+[; ;application.c: 66: {
+{
+[e :U _sensor_initialize ]
+"65
+[; ;application.c: 65: void sensor_initialize(pin_config_t* trigger_pin, ccp_select_t ccp_select)
+[v _trigger_pin `*S102 ~T0 @X0 1 r1 ]
+[v _ccp_select `E1588 ~T0 @X0 1 r2 ]
+"66
+[; ;application.c: 66: {
+[f ]
+"67
+[; ;application.c: 67:     gpio_pin_initialize(trigger_pin);
+[e ( _gpio_pin_initialize (1 -> _trigger_pin `*CS102 ]
+"68
+[; ;application.c: 68:     switch(ccp_select)
+[e $U 118  ]
+"69
+[; ;application.c: 69:     {
+{
+"70
+[; ;application.c: 70:         case CCP1:
+[e :U 119 ]
+"71
+[; ;application.c: 71:           ccp1_init(&ccp1);
+[e ( _ccp1_init (1 -> &U _ccp1 `*CS104 ]
+"72
+[; ;application.c: 72:           break;
+[e $U 117  ]
+"73
+[; ;application.c: 73:         case CCP2:
+[e :U 120 ]
+"74
+[; ;application.c: 74:           ccp2_init(&ccp2);
+[e ( _ccp2_init (1 -> &U _ccp2 `*CS105 ]
+"75
+[; ;application.c: 75:           break;
+[e $U 117  ]
+"76
+[; ;application.c: 76:     }
+}
+[e $U 117  ]
+[e :U 118 ]
+[e [\ -> _ccp_select `ui , $ -> . `E1588 0 `ui 119
+ , $ -> . `E1588 1 `ui 120
+ 117 ]
+[e :U 117 ]
+"77
+[; ;application.c: 77: }
+[e :UE 116 ]
+}
+"83
+[; ;application.c: 83: void servo_initialize(pin_config_t* servo_pin, ccp_select_t ccp_select)
+[v _servo_initialize `(v ~T0 @X0 1 ef2`*S102`E1588 ]
+"84
+[; ;application.c: 84: {
+{
+[e :U _servo_initialize ]
+"83
+[; ;application.c: 83: void servo_initialize(pin_config_t* servo_pin, ccp_select_t ccp_select)
+[v _servo_pin `*S102 ~T0 @X0 1 r1 ]
+[v _ccp_select `E1588 ~T0 @X0 1 r2 ]
+"84
+[; ;application.c: 84: {
+[f ]
+"85
+[; ;application.c: 85:     gpio_pin_initialize(servo_pin);
+[e ( _gpio_pin_initialize (1 -> _servo_pin `*CS102 ]
+"86
+[; ;application.c: 86:     switch(ccp_select)
+[e $U 123  ]
+"87
+[; ;application.c: 87:     {
+{
+"88
+[; ;application.c: 88:         case CCP1:
+[e :U 124 ]
+"89
+[; ;application.c: 89:           ccp1_init(&ccp1);
+[e ( _ccp1_init (1 -> &U _ccp1 `*CS104 ]
+"90
+[; ;application.c: 90:           break;
+[e $U 122  ]
+"91
+[; ;application.c: 91:         case CCP2:
+[e :U 125 ]
+"92
+[; ;application.c: 92:           ccp2_init(&ccp2);
+[e ( _ccp2_init (1 -> &U _ccp2 `*CS105 ]
+"93
+[; ;application.c: 93:           break;
+[e $U 122  ]
+"94
+[; ;application.c: 94:     }
+}
+[e $U 122  ]
+[e :U 123 ]
+[e [\ -> _ccp_select `ui , $ -> . `E1588 0 `ui 124
+ , $ -> . `E1588 1 `ui 125
+ 122 ]
+[e :U 122 ]
+"95
+[; ;application.c: 95: }
+[e :UE 121 ]
+}
+"98
+[; ;application.c: 98: void servo0(void)
+[v _servo0 `(v ~T0 @X0 1 ef ]
+"99
+[; ;application.c: 99: {
+{
+[e :U _servo0 ]
+[f ]
+"100
+[; ;application.c: 100:     ccp2_register_write(60874);
+[e ( _ccp2_register_write (1 -> -> 60874 `l `us ]
+"101
+[; ;application.c: 101: }
+[e :UE 126 ]
+}
+"104
+[; ;application.c: 104: void servo90(void)
+[v _servo90 `(v ~T0 @X0 1 ef ]
+"105
+[; ;application.c: 105: {
+{
+[e :U _servo90 ]
+[f ]
+"106
+[; ;application.c: 106:     ccp2_register_write(61140);
+[e ( _ccp2_register_write (1 -> -> 61140 `l `us ]
+"107
+[; ;application.c: 107: }
+[e :UE 127 ]
+}
+"112
+[; ;application.c: 112: void timer1_isr(void)
+[v _timer1_isr `(v ~T0 @X0 1 ef ]
+"113
+[; ;application.c: 113: {
+{
+[e :U _timer1_isr ]
+[f ]
+"114
+[; ;application.c: 114:     gpio_pin_write_logic(&servo, GPIO_HIGH);
+[e ( _gpio_pin_write_logic (2 , -> &U _servo `*CS102 . `E1524 1 ]
+"115
+[; ;application.c: 115:     counter++;
+[e ++ _counter -> -> 1 `i `uc ]
+"116
+[; ;application.c: 116:     if(10 == counter)
+[e $ ! == -> 10 `i -> _counter `i 129  ]
+"117
+[; ;application.c: 117:     {
+{
+"118
+[; ;application.c: 118:          gpio_pin_write_logic(&trigger, GPIO_HIGH);
+[e ( _gpio_pin_write_logic (2 , -> &U _trigger `*CS102 . `E1524 1 ]
+"119
+[; ;application.c: 119:             _delay((unsigned long)((10)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"120
+[; ;application.c: 120:          gpio_pin_write_logic(&trigger, GPIO_LOW);
+[e ( _gpio_pin_write_logic (2 , -> &U _trigger `*CS102 . `E1524 0 ]
+"121
+[; ;application.c: 121:          counter = 0;
+[e = _counter -> -> 0 `i `uc ]
+"122
+[; ;application.c: 122:     }
+}
+[e :U 129 ]
+"123
+[; ;application.c: 123: }
+[e :UE 128 ]
+}
+"128
+[; ;application.c: 128: void ccp2_isr(void)
+[v _ccp2_isr `(v ~T0 @X0 1 ef ]
+"129
+[; ;application.c: 129: {
+{
+[e :U _ccp2_isr ]
+[f ]
+"130
+[; ;application.c: 130:     gpio_pin_write_logic(&servo, GPIO_LOW);
+[e ( _gpio_pin_write_logic (2 , -> &U _servo `*CS102 . `E1524 0 ]
+"131
+[; ;application.c: 131: }
+[e :UE 130 ]
+}
+"139
+[; ;application.c: 139: void ccp1_isr(void)
+[v _ccp1_isr `(v ~T0 @X0 1 ef ]
+"140
+[; ;application.c: 140: {
+{
+[e :U _ccp1_isr ]
+[f ]
+"141
+[; ;application.c: 141:     if(1 == rising_edge)
+[e $ ! == -> 1 `i -> _rising_edge `i 132  ]
+"142
+[; ;application.c: 142:     {
+{
+"143
+[; ;application.c: 143:         start = CCPR1;
+[e = _start _CCPR1 ]
+"144
+[; ;application.c: 144:         ccp1_change_mode(4);
+[e ( _ccp1_change_mode (1 -> -> 4 `i `uc ]
+"145
+[; ;application.c: 145:         rising_edge = 0;
+[e = _rising_edge -> -> 0 `i `uc ]
+"146
+[; ;application.c: 146:     }
+}
+[e $U 133  ]
+"147
+[; ;application.c: 147:     else
+[e :U 132 ]
+"148
+[; ;application.c: 148:     {
+{
+"149
+[; ;application.c: 149:         end = CCPR1;
+[e = _end _CCPR1 ]
+"150
+[; ;application.c: 150:         ccp1_change_mode(5);
+[e ( _ccp1_change_mode (1 -> -> 5 `i `uc ]
+"151
+[; ;application.c: 151:         rising_edge = 1;
+[e = _rising_edge -> -> 1 `i `uc ]
+"152
+[; ;application.c: 152:         object_exist = 1;
+[e = _object_exist -> -> 1 `i `uc ]
+"154
+[; ;application.c: 154:         if(0 == overflow)
+[e $ ! == -> -> 0 `i `ui -> _overflow `ui 134  ]
+"155
+[; ;application.c: 155:             {
+{
+"156
+[; ;application.c: 156:                time = (end - start) * clk_time;
+[e = _time * -> - -> _end `ui -> _start `ui `f _clk_time ]
+"157
+[; ;application.c: 157:             }
+}
+[e $U 135  ]
+"158
+[; ;application.c: 158:         else
+[e :U 134 ]
+"159
+[; ;application.c: 159:             {
+{
+"160
+[; ;application.c: 160:                 time = (overflow - 1) * clk_time;
+[e = _time * -> - -> _overflow `ui -> -> 1 `i `ui `f _clk_time ]
+"161
+[; ;application.c: 161:                 time += (end - tmr1.initial_value) * clk_time;
+[e =+ _time * -> - -> _end `ui -> . _tmr1 1 `ui `f _clk_time ]
+"162
+[; ;application.c: 162:                 time += (65536 - start) * clk_time;
+[e =+ _time * -> - -> 65536 `l -> _start `l `f _clk_time ]
+"163
+[; ;application.c: 163:             }
+}
+[e :U 135 ]
+"165
+[; ;application.c: 165:             distance = (time * 34000) / 2;
+[e = _distance / * _time -> -> 34000 `l `f -> -> 2 `i `f ]
+"166
+[; ;application.c: 166:     }
+}
+[e :U 133 ]
+"167
+[; ;application.c: 167: }
+[e :UE 131 ]
+}
